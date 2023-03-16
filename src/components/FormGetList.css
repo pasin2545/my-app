@@ -1,0 +1,21 @@
+* {
+    font-family: Charm;
+}
+
+.UwuLink{
+    padding-top: 3vh;
+    font-size: 4.5vh;
+    padding-left: 4vw;
+}
+
+.left_page{
+    height: 100vh;
+    background-color: rgb(104, 237, 255);
+    
+}
+
+.fixposition{
+    position: fixed;
+    left:10vw;
+    padding-top: 15vh;
+}

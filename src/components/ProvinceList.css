@@ -1,0 +1,47 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+
+}
+
+.form1 {
+    padding-top:1vh;
+    font-size: 3rem;
+    /* font-weight: bold; */
+    line-height: 1.2;
+    display: grid;
+    grid-template-columns: 30px auto;
+    gap: 0.5em;
+    
+}
+
+html {
+    font-family: Charm;
+}
+
+form {
+    width: 450px;
+    margin: 0 auto;
+    font-size: 3vh;
+    
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+fieldset {
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(17, 218, 207);
+    border: 6px solid rgb(228, 10, 144);
+    padding-left: 60px;
+    margin-left: 10px;
+    margin-top: 0px;
+    border-radius: 70px;
+}
+
+.btn-lg{
+    padding: 1rem 4rem;
+    font-size: 3.5rem;
+  }
+
+

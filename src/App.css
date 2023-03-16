@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Charm" ;
+}
+
+.page_size{
+  width: 100vw;
+  height: 100vh;
+}
+
+.App-header {
+  background-color: #282c34;
+  text-align: center;
+  color: white;
+  letter-spacing: 3px; 
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.page-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
