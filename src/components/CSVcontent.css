@@ -4,13 +4,20 @@
     padding: 0;
   }
 
-
-.box_color{
-    height: 100vh;
-    background-color: blueviolet;
-}
-
 .box-text{
+    color:white;
     margin-top: 140px;
     text-align: center;
+}
+.table-wad{
+    font-size: 50px;
+    align-self: center;
+}
+.head-text{
+    font-size: 80px;
+}
+.a{
+    text-decoration: none;
+    color: azure;
+    transition: 0.3 ease-in-out;
 }

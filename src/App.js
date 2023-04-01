@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-import { callapi } from './redux/callsAPI';
-import PersonList from './redux/callsAPI';
-import React, { Component } from "react";
+//import { callapi } from './redux/callsAPI';
+import React, { Component, useState, useEffect } from "react";
 import ContactList from "./components/ProvinceList";
 import FormGetList from './components/FormGetList';
-import CSVcontent from './components/CSVcontent';;
+import CSVcontent from './components/CSVcontent';
+import axios from "axios";
+
+const baseURL = "http://127.0.0.1:5001/all_temples";
 
 const App = () => {
-
   return (
-    <body className='page_size'>
+    <div>
       <h1 className="App-header">รายชื่อวัดในจังหวัดชุมพร, เชียงราย, ตรัง, ตราด, อุตรดิตถ์</h1>
-      <div className='page-grid'>
-        < FormGetList />
-        < CSVcontent/>
+      <div className='page-background'>
+        <div className='page-grid'>
+          <FormGetList />
+          <CSVcontent />
+        </div>
       </div>
-    </body>
-
+    </div>
   );
 }
 

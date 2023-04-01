@@ -2,20 +2,48 @@
     font-family: Charm;
 }
 
-.UwuLink{
+#UwuLink{
     padding-top: 3vh;
     font-size: 4.5vh;
-    padding-left: 4vw;
+    padding-left: 1vw;
+    align-items: center;
 }
+
+#UwuLink li{
+  
+
+    list-style: none;
+    border-radius: 100px;
+    border: solid;
+    color:white;
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#UwuLink li a{
+    text-decoration: none;
+    color: azure;
+    transition: 0.3 ease-in-out;
+}
+
+#UwuLink :hover,
+#UwuLink .active{
+    color: black;
+    background: #17cf97;
+}
+
+
 
 .left_page{
     height: 100vh;
-    background-color: rgb(104, 237, 255);
+    /*background-color: rgb(104, 237, 255);*/
     
 }
 
 .fixposition{
     position: fixed;
-    left:10vw;
+    left:3.75vw;
     padding-top: 15vh;
 }

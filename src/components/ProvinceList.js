@@ -1,19 +1,34 @@
 import "./ProvinceList.css";
-import React, { useState } from "react";
-
+import CSVcontent from "./CSVcontent";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 
 function ProvinceList(props) {
+  const [post, setPost] = useState(null);
+    // const [temp,setTemp] = useState("");
+    const baseURL = "http://127.0.0.1:5001/all_temples";
+
+    useEffect(() => {
+        axios.get(baseURL).then((response) => {
+            setPost(response.data)
+            //console.log(response.data.trat)
+            //console.log(response.data["trat"]);
+            //console.log({post})
+
+        });
+    }, []);
 
   const [checked, setChecked] = useState([]);
-  var message = '';
+  
+  const [message, setMessage] = useState([]);
 
   const handleCheck = (event) => {
     var updatedList = [...checked];
     if (event.target.checked) {
-      updatedList = [...checked, event.target.value];
+      updatedList = [...checked, event.target.value]; //***** */
     } else {
-      updatedList.splice(checked.indexOf(event.target.value), 1);
+      updatedList.splice(checked.indexOf(event.target.value), 1); ///**** */
     }
     setChecked(updatedList);
 
@@ -26,48 +41,44 @@ function ProvinceList(props) {
       })
     : "";
 
-     //  (send to backend but I don't know how it work with backend)
+
   const handleSubmit = (event) => {
       event.preventDefault();
-  
-      message =   checkedItems;
-      console.log({message});
 
-      return message ;
-     
-
-    };
-
-
-
+      const checkedList = checkedItems.split(',').map(item => item.trim());
+      
+      setMessage(checkedList);
+   
+      // console.log(message);
+      // console.log(typeof(message[0]))
+  }
   return (
     <div >
       <div className="form1" >
-        <input type="checkbox" id="coding" onChange={handleCheck} name="interest" value="CP" />
-        <label htmlFor="CP">ชุมพร</label>
+        <input type="checkbox" id="chumporn" onChange={handleCheck} name="interest" value="chumporn" />
+        <label htmlFor="chumporn">ชุมพร</label>
       </div>
       <div className="form1" >
-        <input type="checkbox" id="music" onChange={handleCheck} name="interest" value="CR" />
-        <label htmlFor="CR">เชียงราย</label>
+        <input type="checkbox" id="chaengrai" onChange={handleCheck} name="interest" value="chaengrai" />
+        <label htmlFor="chaengrai">เชียงราย</label>
       </div>
       <div className="form1" >
-        <input type="checkbox" id="art" onChange={handleCheck} name="interest" value="Trang" />
-        <label htmlFor="Trang">ตรัง</label>
+        <input type="checkbox" id="trang" onChange={handleCheck} name="interest" value="trang" />
+        <label htmlFor="trang">ตรัง</label>
       </div>
       <div className="form1" >
-        <input type="checkbox" id="sports" onChange={handleCheck} name="interest" value="Trat" />
-        <label htmlFor="Trat">ตราด</label>
+        <input type="checkbox" id="trat" onChange={handleCheck} name="interest" value="trat" />
+        <label htmlFor="trat">ตราด</label>
       </div>
       <div className="form1" >
-        <input type="checkbox" id="cooking" onChange={handleCheck} name="interest" value="UD" />
-        <label htmlFor="UD" >อุตรดิตถ์</label>
+        <input type="checkbox" id="uttaradit" onChange={handleCheck} name="interest" value="uttaradit" />
+        <label htmlFor="uttaradit" >อุตรดิตถ์</label>
       </div>
       <div>
-       <button type="submit" onClick={handleSubmit} className="btn btn-success btn-lg" >Search</button>
+       <button type="submit" onClick={handleSubmit} className="btn btn-success btn-lg" >ค้นหา</button>
       </div>
     </div>
   );
 }
 
-
-export default ProvinceList;
+export default [ProvinceList];

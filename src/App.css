@@ -5,11 +5,6 @@
   font-family: "Charm" ;
 }
 
-.page_size{
-  width: 100vw;
-  height: 100vh;
-}
-
 .App-header {
   background-color: #282c34;
   text-align: center;
@@ -26,7 +21,15 @@
 
 .page-grid{
   display:grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
+  background-color: transparent;
 }
 
+.page-background{
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("https://adaymagazine.com/wp-content/uploads/2018/08/DSC00123-1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+}
