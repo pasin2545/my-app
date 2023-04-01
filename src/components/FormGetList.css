@@ -49,14 +49,45 @@
 
 #overlay{
     position: fixed;
-    top : 3vh;
+    top : 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #show-modal-btn{
     background: transparent;
-    padding-left: 135px;
-    padding-right: 135px;
+    padding-left: 50px;
+    padding-right: 50px;
     color:azure;
     border: none;
     border-radius: 100px;
 } 
+
+#modal{
+    max-width: 1500px;
+    max-height: 800px;
+    margin: auto;
+    background-color: azure;
+    position:absolute;
+    top : 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.website-content{
+    height: 1000vh;
+}
+
+#close-modal-btn{
+    position: absolute;
+    font-size: 80px;
+    top:0;
+    margin-right: 40px;
+    right: 0;
+    background: transparent;
+    border: none;
+}
