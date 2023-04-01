@@ -5,19 +5,6 @@ import ProvinceList from "./ProvinceList";
 import { CSVLink } from "react-csv";
 
 function FormGetList(props) {
-    // const [post, setPost] = useState(null);
-    // // const [temp,setTemp] = useState("");
-    // const baseURL = "http://127.0.0.1:5001/all_temples";
-
-    // useEffect(() => {
-    //     axios.get(baseURL).then((response) => {
-    //         setPost(response.data)
-    //         //console.log(response.data.trat)
-    //         //console.log(response.data["trat"]);
-    //         //console.log({post})
-
-    //     });
-    // }, []);
     var li = [];
     li = li.concat(props.all_temples.chumporn);
     li = li.concat(props.all_temples.chaengrai);
@@ -26,8 +13,6 @@ function FormGetList(props) {
     li = li.concat(props.all_temples.uttaradit);
 
     const csvData = li.map((item) => [item]);
-
-    //console.log("---",li)
 
     return (
         <div className="left_page">

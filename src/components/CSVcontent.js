@@ -8,25 +8,6 @@ import ProvinceList from "./ProvinceList";
 
 function CSVcontent(props) { 
    
-    // const [post, setPost] = useState(null);
-    // const baseURL = "http://127.0.0.1:5001/all_temples";
-
-    // useEffect(() => {
-    //     axios.get(baseURL).then((response) => {
-    //         setPost(response.data)
-    //     });
-    // }, []);
-
-    // if (!post) {
-    //     return (<div className="box_color">
-    //         <div className="box-text">
-    //             <h1>CSV file</h1>
-    //             <h1>{}</h1>
-
-    //             <h2>กำลังโหลด...</h2>
-    //         </div>
-    //     </div>);
-    // }
     var li = [];
     for(let i = 0; i < props.province.length; i +=1){
         if(props.province[i] == "chumporn"){
