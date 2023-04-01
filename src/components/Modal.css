@@ -22,6 +22,7 @@
     color:azure;
     border: none;
     border-radius: 100px;
+    cursor:pointer;
 } 
 
 #modal{
@@ -35,6 +36,7 @@
     left: 0;
     right: 0;
     border-radius: 50px;
+ 
 }
 
 #close-modal-btn{
@@ -45,4 +47,39 @@
     right: 0;
     background: transparent;
     border: none;
+    cursor: pointer;
 }
+
+#regex_head{
+    align-items: center;
+    font-size: 2vw;
+    margin-top: 4vh;
+    text-align: center;
+    color: black;
+}
+
+.container-scroll{
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 1300px;
+    height: 600px;
+    overflow-y: scroll;
+    background-color: rgb(196, 199, 202);
+    align-items: center;
+    
+}
+
+.regex_content{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+.image_1{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://media.discordapp.net/attachments/1081559785238966312/1091827603494670336/image.png?width=728&height=68");
+}
+
