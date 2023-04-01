@@ -1,6 +1,5 @@
-
-import axios from "axios";
 import React, { useEffect, useState } from 'react';
+import axios from "axios";
 
 function CallsAPI() {
     const [post, setPost] = useState(null);
@@ -10,23 +9,14 @@ function CallsAPI() {
     useEffect(() => {
         axios.get(baseURL).then((response) => {
             setPost(response.data)
-            //console.log(response.data.trat)
-            //console.log(response.data["trat"]);
-            //console.log({post})
-
         });
     }, []);
 
-    // console.log("in call api")
-    if (post) {
-
-       
+    if (post) { 
         return (
             post
         )
-
     }
-
 }
 
 export default CallsAPI;

@@ -6,57 +6,43 @@ import ProvinceList from "./ProvinceList";
 
 
 
-function CSVcontent(props) {
+function CSVcontent(props) { 
+   
+    // const [post, setPost] = useState(null);
+    // const baseURL = "http://127.0.0.1:5001/all_temples";
 
-    var x = CallsAPI()
-    // console.log(x)
-    // console.log("past callAPI")
-    // console.log(message + ' test')
-    // console.log(typeof(message))
-    //console.log(props.rows)
-    
+    // useEffect(() => {
+    //     axios.get(baseURL).then((response) => {
+    //         setPost(response.data)
+    //     });
+    // }, []);
 
-    
-    const [post, setPost] = useState(null);
-    // const [temp,setTemp] = useState("");
-    const baseURL = "http://127.0.0.1:5001/all_temples";
+    // if (!post) {
+    //     return (<div className="box_color">
+    //         <div className="box-text">
+    //             <h1>CSV file</h1>
+    //             <h1>{}</h1>
 
-    useEffect(() => {
-        axios.get(baseURL).then((response) => {
-            setPost(response.data)
-            //console.log(response.data.trat)
-            //console.log(response.data["trat"]);
-            //console.log({post})
-
-        });
-    }, []);
-
-    if (!post) {
-        return (<div className="box_color">
-            <div className="box-text">
-                <h1>CSV file</h1>
-                <h1>{}</h1>
-
-                <h2>กำลังโหลด...</h2>
-            </div>
-        </div>);
-    }
+    //             <h2>กำลังโหลด...</h2>
+    //         </div>
+    //     </div>);
+    // }
     var li = [];
     for(let i = 0; i < props.province.length; i +=1){
         if(props.province[i] == "chumporn"){
-            li = li.concat(post.chumporn);
+            li = li.concat(props.all_temples.chumporn);
         }
         if(props.province[i] == "chaengrai"){
-            li = li.concat(post.chaengrai);
+            li = li.concat(props.all_temples.chaengrai);
         }
         if(props.province[i] == "trang"){
-            li = li.concat(post.trang);
+            li = li.concat(props.all_temples.trang);
         }
         if(props.province[i] == "trat"){
-            li = li.concat(post.trat);
+            li = li.concat(props.all_temples.trat);
         }
         if(props.province[i] == "uttaradit"){
-            li = li.concat(post.uttaradit);
+            li = li.concat(props.all_temples.uttaradit);
         }
 
     }

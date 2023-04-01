@@ -5,30 +5,27 @@ import ProvinceList from "./ProvinceList";
 import { CSVLink } from "react-csv";
 
 function FormGetList(props) {
-    const [post, setPost] = useState(null);
-    // const [temp,setTemp] = useState("");
-    const baseURL = "http://127.0.0.1:5001/all_temples";
+    // const [post, setPost] = useState(null);
+    // // const [temp,setTemp] = useState("");
+    // const baseURL = "http://127.0.0.1:5001/all_temples";
 
-    useEffect(() => {
-        axios.get(baseURL).then((response) => {
-            setPost(response.data)
-            //console.log(response.data.trat)
-            //console.log(response.data["trat"]);
-            //console.log({post})
+    // useEffect(() => {
+    //     axios.get(baseURL).then((response) => {
+    //         setPost(response.data)
+    //         //console.log(response.data.trat)
+    //         //console.log(response.data["trat"]);
+    //         //console.log({post})
 
-        });
-    }, []);
-    var csvData = [];
-    if(post){
-        var li = [];
-        li = li.concat(post.chumporn);
-        li = li.concat(post.chaengrai);
-        li = li.concat(post.trang);
-        li = li.concat(post.trat);
-        li = li.concat(post.uttaradit);
+    //     });
+    // }, []);
+    var li = [];
+    li = li.concat(props.all_temples.chumporn);
+    li = li.concat(props.all_temples.chaengrai);
+    li = li.concat(props.all_temples.trang);
+    li = li.concat(props.all_temples.trat);
+    li = li.concat(props.all_temples.uttaradit);
 
-        csvData = li.map((item) => [item]);
-    }
+    const csvData = li.map((item) => [item]);
 
     //console.log("---",li)
 
@@ -37,7 +34,7 @@ function FormGetList(props) {
             <div className="fixposition">
                 <form >
                     <fieldset >
-                        <ProvinceList province={props.province} setProvince={props.setProvince}/>
+                        <ProvinceList province={props.province} setProvince={props.setProvince} all_temples={props.all_temples}/>
                     </fieldset>
                 </form>
                 <nav >
