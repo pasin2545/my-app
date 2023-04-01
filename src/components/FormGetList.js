@@ -16,13 +16,13 @@ function FormGetList(props) {
 
     const csvData = li.map((item) => [item]);
     
-    // const overlay = document.querySelector("#overlay");
-    // document.querySelector("#show-modal-btn").addEventListener("click",()=>{
-    //     overlay.style.display = "block";
-    // })
-    // document.querySelector("#close-modal-btn").addEventListener("click",()=>{
-    //     overlay.style.display = "none";
-    // })
+    const overlay = document.querySelector("#overlay");
+    document.querySelector("#show-modal-btn").addEventListener("click",()=>{
+        overlay.style.display = "block";
+    })
+    document.querySelector("#close-modal-btn").addEventListener("click",()=>{
+        overlay.style.display = "none";
+    })
 
     return (
         <div className="left_page">
