@@ -7,7 +7,7 @@ import ProvinceList from "./ProvinceList";
 
 
 function CSVcontent(props) { 
-   
+    
     var li = [];
     for(let i = 0; i < props.province.length; i +=1){
         if(props.province[i] == "chumporn"){
@@ -32,11 +32,7 @@ function CSVcontent(props) {
     const rows = [];
     for (let i = 0; i < li.length; i += 3) {
         const row = (
-            <tr key={i}>
                 <td className="wat_link"><a href={base_url.concat(li[i])} target="_blank" rel="noreferrer">{li[i]}</a></td>
-                <td className="wat_link"><a href={base_url.concat(li[i+1])} target="_blank" rel="noreferrer">{li[i + 1]}</a></td>
-                <td className="wat_link"><a href={base_url.concat(li[i+2])}  target="_blank" rel="noreferrer">{li[i + 2]}</a></td> 
-            </tr>
         );
         rows.push(row);
     }
@@ -44,11 +40,9 @@ function CSVcontent(props) {
         <div>
             <div className="box-text">
                 <h1 className="head-text">รายชื่อวัด</h1>
-                <table className="table-wad">
-                    <tbody>
+                <div className="page-grid2">
                         {rows}
-                    </tbody>
-                </table>
+                </div>
             </div>
         </div>
 

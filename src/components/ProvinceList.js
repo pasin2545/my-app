@@ -37,7 +37,7 @@ function ProvinceList(props) {
       setMessage(checkedList);
 
       props.setProvince(checkedList);
-   
+  
   }
   return (
     <div >
@@ -61,8 +61,8 @@ function ProvinceList(props) {
         <input type="checkbox" id="uttaradit" onChange={handleCheck} name="interest" value="uttaradit" />
         <label htmlFor="uttaradit" >อุตรดิตถ์</label>
       </div>
-      <div>
-       <button type="submit" onClick={handleSubmit} className="btn btn-success btn-lg" >ค้นหา</button>
+      <div className="container">
+        <button type="submit" onClick={handleSubmit} className="round-border-button" >ค้นหา</button>
       </div>
     </div>
   );

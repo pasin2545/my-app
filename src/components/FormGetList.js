@@ -3,6 +3,17 @@ import React, { useEffect , useState } from "react";
 import axios from "axios";
 import ProvinceList from "./ProvinceList";
 import { CSVLink } from "react-csv";
+import { click } from "@testing-library/user-event/dist/click";
+
+// popup
+// const overlay = document.querySelector("#overlay");
+// document.querySelector("#show-modal-btn").addEventListener("click",()=>{
+//     overlay.style.display = "block";
+// })
+// document.querySelector("#close-modal-btn").addEventListener("click",()=>{
+//     overlay.style.display = "none";
+// })
+
 
 function FormGetList(props) {
     var li = [];
@@ -13,7 +24,7 @@ function FormGetList(props) {
     li = li.concat(props.all_temples.uttaradit);
 
     const csvData = li.map((item) => [item]);
-
+    
     return (
         <div className="left_page">
             <div className="fixposition">
@@ -28,15 +39,32 @@ function FormGetList(props) {
                             <ul id="UwuLink" >
                                 <li><CSVLink data={csvData} filename={"data.csv"}>ดาวน์โหลด</CSVLink></li>
                                 <li><a href="https://github.com/underpoom/my-app" target="_blank" rel="noreferrer">Source Code</a></li>
-                                <li><a href="https://docs.google.com/document/d/1nJuqMgBHYucTWV1b914ynHI5E2y4Yjd032kM5vcvrLw/edit?usp=sharing" target="_blank" rel="noreferrer">Regular Expression</a></li>
                             </ul>
                         </div>
                     </a>
                 </nav>
             </div>
+            
+            {/* <div class="box">
+                <button id="show-modal-btn"> REGEX </button>
+            </div>
+
+            <div id="overlay">
+                <div id="modal">
+                    <button id="close-modal-btn">&times;</button>
+                </div>
+            </div> */}
+
+            {/* <div class="website-contect">
+                <h1>
+                    HeLLOWPRLLLDFLFLDLFL
+                </h1>
+            </div> */}
+
+
+
+            
         </div>
-
-
     );
 }
 
