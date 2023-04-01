@@ -21,7 +21,7 @@
     color: azure;
     transition: 0.3 ease-in-out;
 }
-.wat_link:hover{
+.wat_link a:hover{
     color: rgb(255, 239, 14);
-    font-size: 60px;
+     /* font-size: 60px;  */
 }
