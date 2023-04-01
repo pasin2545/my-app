@@ -38,6 +38,7 @@ function FormGetList(props) {
                             <ul id="UwuLink" >
                                 <li><CSVLink data={csvData} filename={"data.csv"}>ดาวน์โหลด</CSVLink></li>
                                 <li><a href="https://github.com/underpoom/my-app" target="_blank" rel="noreferrer">Source Code</a></li>
+                                <li><button id="show-modal-btn"> REGEX </button></li>
                             </ul>
                         </div>
                     </a>
