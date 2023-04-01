@@ -48,9 +48,9 @@ function ProvinceList(props) {
       const checkedList = checkedItems.split(',').map(item => item.trim());
       
       setMessage(checkedList);
+
+      props.setProvince(checkedList);
    
-      // console.log(message);
-      // console.log(typeof(message[0]))
   }
   return (
     <div >
@@ -81,4 +81,4 @@ function ProvinceList(props) {
   );
 }
 
-export default [ProvinceList];
+export default ProvinceList;

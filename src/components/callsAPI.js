@@ -17,7 +17,7 @@ function CallsAPI() {
         });
     }, []);
 
-    console.log("in call api")
+    // console.log("in call api")
     if (post) {
 
        

@@ -16,8 +16,12 @@
 .head-text{
     font-size: 80px;
 }
-.a{
+.wat_link a{
     text-decoration: none;
     color: azure;
     transition: 0.3 ease-in-out;
+}
+.wat_link:hover{
+    color: rgb(255, 239, 14);
+    font-size: 60px;
 }

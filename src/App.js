@@ -10,13 +10,15 @@ import axios from "axios";
 const baseURL = "http://127.0.0.1:5001/all_temples";
 
 const App = () => {
+  const [province, setProvince] = useState([]);
+  console.log(province);
   return (
     <div>
       <h1 className="App-header">รายชื่อวัดในจังหวัดชุมพร, เชียงราย, ตรัง, ตราด, อุตรดิตถ์</h1>
       <div className='page-background'>
         <div className='page-grid'>
-          <FormGetList />
-          <CSVcontent />
+          <FormGetList province={province} setProvince={setProvince}/>
+          <CSVcontent province={province} setProvince={setProvince}/>
         </div>
       </div>
     </div>
