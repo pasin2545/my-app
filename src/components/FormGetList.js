@@ -5,15 +5,6 @@ import ProvinceList from "./ProvinceList";
 import { CSVLink } from "react-csv";
 import { click } from "@testing-library/user-event/dist/click";
 
-// popup
-// const overlay = document.querySelector("#overlay");
-// document.querySelector("#show-modal-btn").addEventListener("click",()=>{
-//     overlay.style.display = "block";
-// })
-// document.querySelector("#close-modal-btn").addEventListener("click",()=>{
-//     overlay.style.display = "none";
-// })
-
 
 function FormGetList(props) {
     var li = [];
@@ -25,6 +16,14 @@ function FormGetList(props) {
 
     const csvData = li.map((item) => [item]);
     
+    // const overlay = document.querySelector("#overlay");
+    // document.querySelector("#show-modal-btn").addEventListener("click",()=>{
+    //     overlay.style.display = "block";
+    // })
+    // document.querySelector("#close-modal-btn").addEventListener("click",()=>{
+    //     overlay.style.display = "none";
+    // })
+
     return (
         <div className="left_page">
             <div className="fixposition">
@@ -45,7 +44,7 @@ function FormGetList(props) {
                 </nav>
             </div>
             
-            {/* <div class="box">
+            <div class="box">
                 <button id="show-modal-btn"> REGEX </button>
             </div>
 
@@ -53,13 +52,13 @@ function FormGetList(props) {
                 <div id="modal">
                     <button id="close-modal-btn">&times;</button>
                 </div>
-            </div> */}
+            </div>
 
-            {/* <div class="website-contect">
+            <div class="website-contect">
                 <h1>
                     HeLLOWPRLLLDFLFLDLFL
                 </h1>
-            </div> */}
+            </div> 
 
 
 

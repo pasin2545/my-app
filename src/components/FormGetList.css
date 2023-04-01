@@ -37,7 +37,6 @@
 
 .left_page{
     height: 100vh;
-    /*background-color: rgb(104, 237, 255);*/
     
 }
 
@@ -48,3 +47,30 @@
 }
 
 
+#overlay{
+    position: fixed;
+    top : 3vh;
+}
+
+#show-modal-btn{
+    position: fixed;
+    font-size: 30px;
+    font-size: 4.5vh;
+    padding-left: 1vw;
+    align-items: center;
+    bottom: 5px;
+    left: 4.5vw;
+    border-radius: 100px;
+    border: solid;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 37vw;
+    background: transparent;
+    color: azure;
+}
+
+#show-modal-btn:hover{
+    background: #17cf97;
+    color: black;
+}
