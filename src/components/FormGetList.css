@@ -1,12 +1,13 @@
-* {
+/* * {
     font-family: Charm;
-}
+} */
 
 #UwuLink{
     padding-top: 3vh;
     font-size: 4.5vh;
     padding-left: 1vw;
     align-items: center;
+    font-family: Charm;
 }
 
 #UwuLink li{

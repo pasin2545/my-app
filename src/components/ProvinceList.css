@@ -1,7 +1,7 @@
-* {
+/* * {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 
-}
+} */
 
 .form1 {
     padding-top:1vh;
@@ -12,6 +12,7 @@
     grid-template-columns: 30px auto;
     gap: 0.5em;
     margin-bottom: 10px;
+    font-family: Charm;
 }
 
 html {
@@ -48,6 +49,7 @@ fieldset {
     background-color: #06D85F;
     border-color: #06D85F;
     color: black;
+    font-family: Charm;
   }
 .round-border-button:active{
         color: white;
